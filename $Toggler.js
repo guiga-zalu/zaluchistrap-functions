@@ -14,15 +14,15 @@ $Toggler = {
 		var valor = _valor;
 		if(!_valor) valor = _prop;
 		var a = this.get(ele, prop);
-		var b = this.get(ele, prop, (_valor ? _prop : 0));
 		var ret = '';
-		if(_prop){
+		if(_prop != valor){
 			let x = a.join();
 			let y = x.indexOf(_prop);
-			ret = 
+			ret = x.replace(x.slice(y, x.indexOf(',', y) ), valor);
 		}else{
-			let x = (a.join()).indexOf(_prop);
-			ret = a.replace(a.slice(x, a.indexOf(',', x)), valor);
+			let y = a.join();
+			let x = y.indexOf(valor);
+			ret = y.replace(y.slice(x, y.indexOf(',', x)), valor);
 		}
 		ele.style.setProperty(prop, ret);
 	},
