@@ -38,7 +38,7 @@ $Math = $Canvas.Math = {
 		var y = that.func(index);
 		that.context.strokeStyle = color || $Css.random();
 		that.context.beginPath();
-var x = -this.mX ;
+		var x = -this.mX;
 		that.context.moveTo(
 			this.to.width(x),
 			this.to.height( y(x) )
@@ -48,23 +48,20 @@ var x = -this.mX ;
 		}
 		that.context.stroke();
 	},
-advDraw : function(index ,color) {
-var y = this.Functions [index ];
-color = that.context.strokeStyle = color || $Css.random ();
-that.context.beginPath ();
-var x = -this.mX;
-that.context.moveTo (
-this.to.width (x),
-this.to.height ( y (x))
-);
-for (; x <= this.mX ; x++){
-that.context.lineTo (
-this.to.width (x),
-this.to.height (y (x))
-);
-}
-that.context.stroke ();
-}
+	advDraw : function(index, color) {
+		var y = this.Functions[index];
+		that.context.strokeStyle = color || $Css.random();
+		that.context.beginPath();
+		var x = -this.mX;
+		that.context.moveTo(
+			this.to.width(x),
+			this.to.height( y(x) )
+		);
+		for(; x <= this.mX ; x++){
+			that.context.lineTo( this.to.width(x), this.to.height( y(x) ));
+		}
+		that.context.stroke();
+	}
 }
 //Call: $Canvas.Math.setup(x0, y0[, x1, y1])
 //Bef : $Canvas.Math.addFunction(arguments)
