@@ -1,6 +1,6 @@
 _Parallax = {
 	init : function(){
-		this.elements = docuemnt.querySelectorAll('parallax, .parallax, #parallax, [parallax]');
+		this.elements = document.querySelectorAll('parallax, .parallax, #parallax, [parallax]');
 		var elements = this.elements;
 		for(var i = 0; i < elements.length; i++){
 			elements[i].style.setProperty('z-index',
@@ -17,4 +17,4 @@ _Parallax = {
 		}
 	}
 };
-$Constructor.functions.push('_Parallax.init');
+$Constructor.functions.push(_Parallax.init);
