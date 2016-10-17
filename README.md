@@ -13,3 +13,5 @@ Some my and user-made functions to use with the zaluchistrap base library.
 2016 09 22 20:40 (BR) Updated Math & created init reference creator.
 2016 09 26 09:05 (BR) Updated Parallax.
 2016 10 05 13:01 (BR) Updated _Game_.
+2016 10 17 12:59 (BR) Updated _3dContext_.
+2016 10 17 13:01 (BR) Updated _Game_.
