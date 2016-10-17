@@ -7,8 +7,8 @@ _Game = $Canvas.Game = {
 		);
 	},
 	update : function(){
-		for(var x in this.elements)
-			elements[x].update ? elements[x].update() : elements[x].draw();
+		var x = this.elements;
+		for(var y in x) $Canvas.draw( x[y] ) || x[y].draw();
 	},
 	element : function(width, height, color, x, y, type, mode, ){
 		this.mode = mode.toLowerCase() == 'fill';
